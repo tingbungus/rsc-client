@@ -114,7 +114,13 @@ class GameConnection extends GameShell {
             this.packetStream.putString(password);
             this.packetStream.flushPacket();
 
-            const response = await this.packetStream.readStream();
+            let response;
+            try {
+                response = await this.packetStream.readStream();
+            } catch (error) {
+                console.error('Error reading stream:', error);
+                return;
+            }
 
             this.packetStream.closeStream();
 
