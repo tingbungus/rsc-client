@@ -21,8 +21,8 @@ if (typeof window === 'undefined') {
     });
 
     mc.members = args[0] === 'members';
-    mc.server = args[1] ? args[1] : '127.0.0.1';
-    mc.port = args[2] && !isNaN(+args[2]) ? +args[2] : 43595;
+    mc.server = '127.0.0.1';
+    mc.port = 43595;
 
     mc.threadSleep = 10;
 
