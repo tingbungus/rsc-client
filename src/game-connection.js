@@ -72,9 +72,12 @@ class GameConnection extends GameShell {
         }
 
         try {
-            console.log('trying..');
             username = Utility.formatAuthString(username, 20);
             password = Utility.formatAuthString(password, 20);
+
+            console.log(username);
+            console.log(password);
+            console.log('trying..');
 
             this.showLoginScreenStatus(
                 'Please wait...',
