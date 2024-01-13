@@ -20,8 +20,22 @@ if (typeof window === 'undefined') {
         mobile: false
     });
 
+    const serverWorker = new Worker('../rsc-server/browser.bundle.min.js');
+
+    serverWorker.postMessage({
+        type: 'start',
+        config: {
+            worldID: 1,
+            version: 204,
+            members: false,
+            experienceRate: 1,
+            fatigue: true,
+            rememberCombatStyle: false
+        }
+    });
+
     mc.members = false;
-    mc.server = '127.0.0.1';
+    mc.server = serverWorker;
     mc.port = 43594;
 
     mc.threadSleep = 10;
