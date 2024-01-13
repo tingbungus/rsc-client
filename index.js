@@ -20,9 +20,9 @@ if (typeof window === 'undefined') {
         mobile: false
     });
 
-    mc.members = args[0] === 'members';
+    mc.members = false;
     mc.server = '127.0.0.1';
-    mc.port = 43595;
+    mc.port = 43594;
 
     mc.threadSleep = 10;
 
