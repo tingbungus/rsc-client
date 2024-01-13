@@ -55,7 +55,6 @@ class GameConnection extends GameShell {
     }
 
     async register(username, password) {
-        console.log('wtf dude');
         if (this.worldFullTimeout > 0) {
             this.showLoginScreenStatus(
                 'Please wait...',
@@ -73,6 +72,7 @@ class GameConnection extends GameShell {
         }
 
         try {
+            console.log('trying..');
             username = Utility.formatAuthString(username, 20);
             password = Utility.formatAuthString(password, 20);
 
