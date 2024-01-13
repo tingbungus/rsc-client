@@ -20,23 +20,9 @@ if (typeof window === 'undefined') {
         mobile: false
     });
 
-    const serverWorker = new Worker('../rsc-server/browser.bundle.min.js');
-
-    serverWorker.postMessage({
-        type: 'start',
-        config: {
-            worldID: 1,
-            version: 204,
-            members: false,
-            experienceRate: 1,
-            fatigue: true,
-            rememberCombatStyle: false
-        }
-    });
-
-    mc.members = false;
-    mc.server = serverWorker;
-    mc.port = 43594;
+    mc.members = args[0] === 'members';
+    mc.server = args[1] ? args[1] : '127.0.0.1';
+    mc.port = args[2] && !isNaN(+args[2]) ? +args[2] : 43595;
 
     mc.threadSleep = 10;
 
