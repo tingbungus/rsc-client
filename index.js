@@ -20,7 +20,7 @@ if (typeof window === 'undefined') {
         mobile: false
     });
 
-    mc.members = args[0] === 'members';
+    mc.members = true;
     mc.server = args[1] ? args[1] : '15.204.227.56';
     mc.port = args[2] && !isNaN(+args[2]) ? +args[2] : 43595;
 
