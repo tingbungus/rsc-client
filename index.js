@@ -20,7 +20,7 @@ if (typeof window === 'undefined') {
         mobile: false
     });
 
-    mc.members = true;
+    mc.members = false;
     mc.server = args[1] ? args[1] : 'runecult.xyz';
     mc.port = args[2] && !isNaN(+args[2]) ? +args[2] : 43595;
 
