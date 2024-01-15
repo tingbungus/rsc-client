@@ -32,6 +32,8 @@ if (typeof window === 'undefined') {
 
     fullscreen.innerText = 'Fullscreen';
 
+    mcContainer.requestFullscreen();
+
     fullscreen.onclick = () => {
         mcContainer.requestFullscreen();
     };
