@@ -21,7 +21,7 @@ if (typeof window === 'undefined') {
     });
 
     mc.members = true;
-    mc.server = args[1] ? args[1] : 'runecult.xyz/api';
+    mc.server = args[1] ? args[1] : 'runecult.xyz';
     mc.port = args[2] && !isNaN(+args[2]) ? +args[2] : 43595;
 
     mc.threadSleep = 10;
