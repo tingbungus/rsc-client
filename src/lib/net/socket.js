@@ -34,10 +34,7 @@ class Socket {
     connect() {
         return new Promise((resolve, reject) => {
             if (typeof this.host === 'string') {
-                this.client = new WebSocket(
-                    `wss://${this.host}:${this.port}/ws/`,
-                    'binary'
-                );
+                this.client = new WebSocket(`wss://${this.host}/ws/`, 'binary');
             } else if (this.host.constructor.name === 'Worker') {
                 this.client = new WorkerSocket(this.host);
             } else if (this.host.constructor.name === 'Peer') {
